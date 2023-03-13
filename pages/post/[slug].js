@@ -5,12 +5,12 @@ import { getPosts, getPostDetails } from "../../services";
 
 import {
   PostDetail,
-  Categories,
   PostWidget,
   Author,
   Comments,
   CommentsForm,
   Loader,
+  Topics,
 } from "../../components";
 
 const PostDetails = ({ post }) => {
@@ -21,22 +21,22 @@ const PostDetails = ({ post }) => {
   }
 
   return (
-    <div className="container mx-auto px-10 mb-8">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="col-span-1 lg:col-span-8">
+    <div className="max-w-[1336px] mx-auto">
+      <div className="flex justify-evenly">
+        <div className="w-[728px]">
           <PostDetail post={post} />
-          <Author author={post.author} />
           <CommentsForm slug={post.slug} />
           <Comments slug={post.slug} />
         </div>
-        <div className="col-span-1 lg:col-span-4">
-          <div className="relative lg:sticky top-8">
-            <PostWidget
-              slug={post.slug}
-              categories={post.categories.map((category) => category.slug)}
-            />
-            <Categories />
-          </div>
+        <div className="w-[368px] min-h-screen pr-[24px] pl-[40px] border-[1px] border-solid border-[rgba(242,242,242,1)]">
+          <Author author={post.author} />
+
+          <PostWidget
+            slug={post.slug}
+            categories={post.categories.map((category) => category.slug)}
+          />
+          
+          <Topics />
         </div>
       </div>
     </div>

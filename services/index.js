@@ -99,10 +99,16 @@ export const getSimilarPosts = async (categories, slug) => {
         last: 3
       ) {
         title
+        author {
+          name
+          bio
+          photo {
+            url
+          }
+        }
         featuredImage {
           url
         }
-        createdAt
         slug
       }
     }
@@ -220,10 +226,13 @@ export const getRecentPosts = async () => {
         last: 3
       ) {
         title
-        featuredImage {
-          url
+        author {
+          name
+          bio
+          photo {
+            url
+          }
         }
-        createdAt
         slug
       }
     }

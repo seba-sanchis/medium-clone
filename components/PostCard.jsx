@@ -2,47 +2,43 @@ import React from "react";
 import moment from "moment";
 import Link from "next/link";
 
-const PostCard = ({ post }) => {
+const PostCard = ({ post, index }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
-      <div className="relative overflow-hidden shadow-md pb-80 mb-6">
+    <div className={index === 0 ? "w-[680px] mx-[24px]" : "w-[680px] mx-[24px] pt-[24px]"}>
+      <div className="flex items-center">
         <img
-          src={post.featuredImage.url}
-          alt={post.title}
-          className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
+          alt={post.author.name}
+          height="24px"
+          width="24px"
+          src={post.author.photo.url}
+          className="rounded-full"
         />
-      </div>
-      <h1 className="transition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold">
-        <Link href={`/post/${post.slug}`}>{post.title}</Link>
-      </h1>
-      <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
-        <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
-          <img
-            alt={post.author.name}
-            height="30px"
-            width="30px"
-            className="align-middle rounded-full"
-            src={post.author.photo.url}
-          />
-          <p className="inline align-middle text-gray-700 ml-2 text-lg">
-            {post.author.name}
-          </p>
-        </div>
-        <div className="font-medium text-gray-700">
-          <span>·</span>
+        <p className="ml-[8px] text-[14px] leading-[20px] text-[rgba(41,41,41,1)]">
+          {post.author.name}
+        </p>
+        <div className="text-[14px] leading-[20px] text-[rgba(117,117,117,1)]">
+          <span className="mx-[4px]">·</span>
           <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
         </div>
       </div>
-      <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
-        {post.excerpt}
-      </p>
-      <div className="text-center">
-        <Link href={`/post/${post.slug}`}>
-          <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
-            Continue reading
-          </span>
-        </Link>
-      </div>
+      <Link href={`/post/${post.slug}`} className="flex mt-[12px] mb-[32px]">
+        <div className="w-[508px]">
+          <h1 className="max-h-[84px] pb-[8px] text-[22px] leading-[28px] font-bold text-[rgba(41,41,41,1)]">
+            {post.title}
+          </h1>
+          <p className="max-h-[72px] text-[16px] leading-[24px] text-ellipsis overflow-hidden line-clamp-3 text-[rgba(41,41,41,1)]">
+            {post.excerpt}
+          </p>
+        </div>
+        <div className="flex justify-center min-w-[112px] w-[112px] h-[112px] overflow-hidden ml-[60px]">
+          <img
+            src={post.featuredImage.url}
+            alt={post.title}
+            className="max-w-none h-[112px]"
+          />
+        </div>
+      </Link>
+      <hr aria-hidden="true" className="bg-[rgb(230,230,230)]"></hr>
     </div>
   );
 };

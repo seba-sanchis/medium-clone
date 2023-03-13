@@ -12,29 +12,30 @@ function Comments({ slug }) {
   }, []);
 
   return (
-    <>
+    <div className="mt-[40px] mb-[40px] bg-[rgb(250,250,250)]">
       {comments.length > 0 && (
-        <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
-          <h3 className="text-xl mb-8 font-semibold border-b pb-4">
+        <div className="mx-[24px]">
+          <h3 className="pt-[24px] pb-[32px] text-[20px] leading-[24px] font-medium text-[rgba(41,41,41,1)]">
             {comments.length} Comments
           </h3>
           {comments.map((comment) => (
-            <div
-              key={comment.createdAt}
-              className="border-b border-gray-100 mb-4 pb-4"
-            >
-              <p className="mb-4">
-                <span className="font-semibold">{comment.name}</span> on{" "}
-                {moment(comment.createdAt).format("MMM DD, YYYY")}
-              </p>
-              <p className="whitespace-pre-line text-gray-600 w-full">
+            <div key={comment.createdAt} className="pb-[32px]">
+              <hr aria-hidden="true"></hr>
+              <div className="pt-[24px] pb-[8px] text-[14px] leading-[20px]">
+                <span className="text-[rgba(41,41,41,1)]">{comment.name}</span>
+                <span className="mx-[4px] text-[rgba(117,117,117,1)]">·</span>
+                <span className="text-[rgba(117,117,117,1)]">
+                  {moment(comment.createdAt).format("MMM DD, YYYY")}
+                </span>
+              </div>
+              <p className="text-[16px] leading-[24px] italic text-[rgba(41,41,41,1)]">
                 {parse(comment.comment)}
               </p>
             </div>
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 }
 
