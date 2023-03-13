@@ -126,7 +126,7 @@ function CommentsForm({ slug }) {
         >
           Post Comment
         </button>
-        {showSuccessMessage && <span>Comment submitted for review</span>}
+        {showSuccessMessage && <span className="ml-[8px] text-[14px] leading-[20px] text-[rgb(26,137,23)]">Comment submitted for review</span>}
       </div>
     </div>
   );
