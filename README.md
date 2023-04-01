@@ -1,27 +1,44 @@
-# Next.js + Tailwind CSS Example
+# Blog - publish your passions your way
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Headless CMS App built with a query languaje and managed from Hygraph, a dedicated Content Management System.
 
-## Deploy your own
+## Setups
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+Before you start, you will need to create the <code>.env</code> file in the root folder to connect to Hygraph.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+Open the .env file and type the following variables:
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+    NEXT_PUBLIC_HYGRAPH_ENDPOINT = *add your Hygraph endpoint*
+    HYGRAPH_TOKEN = *add your Hygraph token*
 ```
+
+## Available Scripts
+
+Install packages and all dependencies.
 
 ```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+    npm i
 ```
+
+Runs the app in the development mode.
 
 ```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+    npm run dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Learn More
+
+To learn more about this project, take a look at the following resources:
+
+- [GraphQL](https://graphql.org/) - open-source data query language and data manipulation language for APIs, and a query runtime engine.
+- [Hygraph](https://hygraph.com/) - native GraphQL Headless CMS focused on Content Federation.
+- [Next.js](https://nextjs.org/) - open-source web development framework providing React-based web applications with server-side rendering and static website generation.
+- [React](https://reactjs.org/) - open-source frontend JavaScript library for building user interfaces based on components.
+- [Tailwind CSS](https://tailwindcss.com/) - open source CSS framework that it does not provide a series of predefined classes for elements.
+
+## Deployment
+
+Application hosted on AWS: https://blog.sebastiansanchis.com/
