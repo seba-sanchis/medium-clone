@@ -4,7 +4,11 @@ import Link from "next/link";
 
 const PostCard = ({ post, index }) => {
   return (
-    <div className={index === 0 ? "w-[680px] mx-[24px]" : "w-[680px] mx-[24px] pt-[24px]"}>
+    <div
+      className={
+        index === 0 ? "w-[680px] mx-[24px]" : "w-[680px] mx-[24px] pt-[24px]"
+      }
+    >
       <div className="flex items-center">
         <img
           alt={post.author.name}
@@ -21,21 +25,23 @@ const PostCard = ({ post, index }) => {
           <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
         </div>
       </div>
-      <Link href={`/post/${post.slug}`} className="flex mt-[12px] mb-[32px]">
-        <div className="w-[508px]">
-          <h1 className="max-h-[84px] pb-[8px] text-[22px] leading-[28px] font-bold text-[rgba(41,41,41,1)]">
-            {post.title}
-          </h1>
-          <p className="max-h-[72px] text-[16px] leading-[24px] text-ellipsis overflow-hidden line-clamp-3 text-[rgba(41,41,41,1)]">
-            {post.excerpt}
-          </p>
-        </div>
-        <div className="flex justify-center min-w-[112px] w-[112px] h-[112px] overflow-hidden ml-[60px]">
-          <img
-            src={post.featuredImage.url}
-            alt={post.title}
-            className="max-w-none h-[112px]"
-          />
+      <Link href={`/post/${post.slug}`}>
+        <div className="flex mt-[12px] mb-[32px]">
+          <div className="w-[508px]">
+            <h1 className="max-h-[84px] pb-[8px] text-[22px] leading-[28px] font-bold text-[rgba(41,41,41,1)]">
+              {post.title}
+            </h1>
+            <p className="max-h-[72px] text-[16px] leading-[24px] text-ellipsis overflow-hidden line-clamp-3 text-[rgba(41,41,41,1)]">
+              {post.excerpt}
+            </p>
+          </div>
+          <div className="flex justify-center min-w-[112px] w-[112px] h-[112px] overflow-hidden ml-[60px]">
+            <img
+              src={post.featuredImage.url}
+              alt={post.title}
+              className="max-w-none h-[112px]"
+            />
+          </div>
         </div>
       </Link>
       <hr aria-hidden="true" className="bg-[rgb(230,230,230)]"></hr>
