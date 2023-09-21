@@ -1,4 +1,4 @@
-# Blog - publish your passions your way
+# Blog - Publish your passions your way.
 
 Headless CMS App built with a query languaje and managed from Hygraph, a dedicated Content Management System.
 
@@ -33,11 +33,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 To learn more about this project, take a look at the following resources:
 
-- [GraphQL](https://graphql.org/) - open-source data query language and data manipulation language for APIs, and a query runtime engine.
-- [Hygraph](https://hygraph.com/) - native GraphQL Headless CMS focused on Content Federation.
-- [Next.js](https://nextjs.org/) - open-source web development framework providing React-based web applications with server-side rendering and static website generation.
-- [React](https://reactjs.org/) - open-source frontend JavaScript library for building user interfaces based on components.
-- [Tailwind CSS](https://tailwindcss.com/) - open source CSS framework that it does not provide a series of predefined classes for elements.
+- [GraphQL](https://graphql.org/) - Data query language and data manipulation language for APIs, and a query runtime engine.
+- [Hygraph](https://hygraph.com/) - Native GraphQL Headless CMS focused on Content Federation.
+- [Next.js](https://nextjs.org/) - Web development framework providing React-based web applications with server-side rendering and static website generation.
+- [React](https://reactjs.org/) - Frontend JavaScript library for building user interfaces based on components.
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework that it does not provide a series of predefined classes for elements.
 
 ## Deployment
 
