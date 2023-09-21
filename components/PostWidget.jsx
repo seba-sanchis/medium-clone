@@ -25,7 +25,7 @@ const PostWidget = ({ categories, slug }) => {
       {relatedPosts.map((post) => (
         <div key={post.title} className="pb-[20px]">
           <Link href={`/post/${post.slug}`} key={post.title}>
-            <div className="flex justify-between">
+            <div className="flex justify-between cursor-pointer">
               <div className="mr-[24px]">
                 <div className="flex items-center mb-[8px]">
                   <img

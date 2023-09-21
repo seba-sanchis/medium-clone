@@ -17,14 +17,12 @@ const Topics = () => {
       </h3>
       <div className="flex flex-wrap">
         {categories.map((category) => (
-          <Link
-            key={category.slug}
-            href={`/category/${category.slug}`}
-            className="py-[8px] px-[16px] mr-[8px] mb-[10px] transition ease duration-300 rounded-full bg-[rgba(242,242,242,1)] hover:bg-[rgb(230,230,230)]"
-          >
-            <span className="text-[14px] leading-[20px] text-[rgba(41,41,41,1)]">
-              {category.name}
-            </span>
+          <Link key={category.slug} href={`/category/${category.slug}`}>
+            <div className="py-[8px] px-[16px] mr-[8px] mb-[10px] transition ease duration-300 rounded-full bg-[rgba(242,242,242,1)] hover:bg-[rgb(230,230,230)]">
+              <span className="text-[14px] leading-[20px] text-[rgba(41,41,41,1)]">
+                {category.name}
+              </span>
+            </div>
           </Link>
         ))}
       </div>

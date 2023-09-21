@@ -18,20 +18,18 @@ const Categories = () => {
         </svg>
       </span>
       {categories.map((category) => (
-        <Link
-          key={category.slug}
-          href={`/category/${category.slug}`}
-          className="mr-[32px] text-[14px] leading-[20px] text-[rgba(117,117,117,1)]"
-        >
-          <span
-            className={
-              window.location.pathname === `/category/${category.slug}`
-                ? "pb-[16px] border-b border-solid border-[rgba(41,41,41,1)] text-[rgb(8,8,8)]"
-                : ""
-            }
-          >
-            {category.name}
-          </span>
+        <Link key={category.slug} href={`/category/${category.slug}`}>
+          <div className="mr-[32px] text-[14px] leading-[20px] text-[rgba(117,117,117,1)] cursor-pointer">
+            <span
+              className={
+                window.location.pathname === `/category/${category.slug}`
+                  ? "pb-[16px] border-b border-solid border-[rgba(41,41,41,1)] text-[rgb(8,8,8)]"
+                  : ""
+              }
+            >
+              {category.name}
+            </span>
+          </div>
         </Link>
       ))}
     </div>

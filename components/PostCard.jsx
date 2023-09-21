@@ -26,7 +26,7 @@ const PostCard = ({ post, index }) => {
         </div>
       </div>
       <Link href={`/post/${post.slug}`}>
-        <div className="flex mt-[12px] mb-[32px]">
+        <div className="flex mt-[12px] mb-[32px] cursor-pointer">
           <div className="w-[508px]">
             <h1 className="max-h-[84px] pb-[8px] text-[22px] leading-[28px] font-bold text-[rgba(41,41,41,1)]">
               {post.title}
