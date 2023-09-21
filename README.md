@@ -41,4 +41,4 @@ To learn more about this project, take a look at the following resources:
 
 ## Deployment
 
-Application hosted on AWS: https://blog.sebastiansanchis.com/
+Application hosted on AWS Lambda: https://blog.sebastiansanchis.com/
