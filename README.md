@@ -1,4 +1,4 @@
-# Blog - Publish your passions your way.
+# Medium Clone - Publish your passions your way.
 
 Headless CMS App built with a query languaje and managed from Hygraph, a dedicated Content Management System.
 
